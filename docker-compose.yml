@@ -1,0 +1,11 @@
+services:
+  platform:
+    build: .
+    container_name: kidsgames-platform
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
